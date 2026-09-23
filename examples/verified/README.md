@@ -1,11 +1,34 @@
-# 真实渲染验证
+# Verified Screenshots
 
-使用本项目 Compose 示例、assets/CaptureScene.kt 和 request.json，通过 Google Compose Preview Screenshot Testing alpha16 / Layoutlib 实际生成。
+Real PNGs rendered from the [Compose demo](../compose-demo) using Google's Compose Preview Screenshot Testing alpha16 and Layoutlib. The original files retain their native pixel dimensions, with no resizing or redrawing.
 
-环境：Windows、JDK 21、AGP 9.4、Gradle 9.6、Android SDK 37.1。三张 PNG 均验证完整性、原生像素尺寸和 SHA-256；深色手机/平板已目视确认原生状态栏和导航栏。系统栏使用项目附带的 alpha16 兼容适配。
+## Gallery
 
-- shanghai-rain-dark.png：720×1280，中文、上海、小雨18度、湿度84%、深色、系统栏。
-- london-sun-light.png：720×1280，英文、London、晴23度、湿度52%、浅色、无系统栏。
-- tablet-dark.png：1600×2560，中文、北京、多云12度、湿度67%、深色、系统栏、平板双列布局。
+| Dark Phone | Light Phone | Dark Tablet |
+| --- | --- | --- |
+| ![Shanghai weather in Chinese, dark phone layout](shanghai-rain-dark.png) | ![London weather in English, light phone layout](london-sun-light.png) | ![Beijing weather in Chinese, dark two-column tablet layout](tablet-dark.png) |
+| 720 × 1280 · Chinese | 720 × 1280 · English | 1600 × 2560 · Chinese |
+| Shanghai · Rain · 18°C · 84% humidity | London · Sunny · 23°C · 52% humidity | Beijing · Cloudy · 12°C · 67% humidity |
+| System bars shown | System bars hidden | System bars shown · Two-column layout |
 
-result.json 保留每张原始图片的哈希与设置，路径改为相对此目录。图片未缩放、未重绘。AGP 9.5 原生 test suite 配置尚未进行完整渲染验证。
+## Try It
+
+With the skill installed, open the [Compose demo](../compose-demo) and ask your agent:
+
+```text
+Use code-to-screenshot to render the Compose demo with
+examples/verified/request.json and assets/CaptureScene.kt.
+Save the results to a new output folder and verify all three PNGs.
+```
+
+See [installation and usage](../../README.md) to get started.
+
+## Verification
+
+All three PNGs passed integrity, exact pixel dimension, and SHA-256 checks. Native status and navigation bars were visually confirmed on the dark phone and tablet renders using the bundled alpha16 compatibility adapter.
+
+**Verified environment:** Windows · JDK 21 · AGP 9.4 · Gradle 9.6 · Android SDK 37.1. AGP 9.5 native test suites have not been fully verified with a render.
+
+- [Capture request](request.json): scene settings and mock data.
+- [Capture results](result.json): original image hashes, dimensions, and settings, with paths relative to this directory.
+- [Renderer compatibility](../../references/layoutlib.md): setup details and limitations.

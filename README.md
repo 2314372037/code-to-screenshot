@@ -50,6 +50,36 @@ with light and dark themes for both phone and tablet layouts.
 Use realistic sample data and hide the system bars.
 ```
 
+## From Code to Store Screenshots
+
+Pair this skill with [app-store-screenshots](https://github.com/ParthJadhav/app-store-screenshots) to take your Compose app from code to finished store marketing screenshots in one agent workflow:
+
+**Compose code → native PNGs → marketing layouts → store-ready PNG bundle**
+
+Install the companion skill:
+
+```bash
+npx skills add ParthJadhav/app-store-screenshots
+```
+
+Then give your agent one request:
+
+```text
+Use code-to-screenshot and app-store-screenshots together to create
+Google Play screenshots for my Android app from start to finish.
+
+Capture the key Compose screens with realistic mock data using
+code-to-screenshot. Pass the generated PNGs directly to
+app-store-screenshots, then create 5 marketing slides with device
+frames, concise feature headlines, and a clean, modern style.
+Use English and export the final Google Play PNG bundle.
+
+Handle capture, asset handoff, layout, and export automatically.
+Check the rendered images and deliver the final files.
+```
+
+The agent coordinates both skills; automated export requires an agent with browser control and the companion editor's runtime dependencies. The workflow ends with files ready to upload, rather than publishing to a store account. For Apple App Store assets, provide genuine iOS captures separately; this skill captures Android Compose only.
+
 ## Scope
 
 Android Jetpack Compose only. This skill produces UI screenshots, without device frames or store marketing layouts. SwiftUI is not supported.
