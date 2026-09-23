@@ -1,0 +1,9 @@
+<resources>
+    <string name="weather_title">天气</string>
+    <string name="sunny">晴天</string>
+    <string name="cloudy">多云</string>
+    <string name="rain">小雨</string>
+    <string name="hourly">逐小时预报</string>
+    <string name="humidity">湿度</string>
+    <string name="details">查看详情</string>
+</resources>

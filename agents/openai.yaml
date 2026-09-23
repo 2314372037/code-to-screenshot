@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code to Screenshot"
+  short_description: "Render real Compose UI to PNG with mock data and device options"
+  default_prompt: "Use $code-to-screenshot to render this Compose screen as a PNG with my chosen mock data, language, theme, device, system bars, and resolution."

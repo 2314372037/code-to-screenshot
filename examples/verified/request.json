@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "defaults": {
+    "device": "phone",
+    "resolution": {"width": 720, "height": 1280},
+    "system_ui": true
+  },
+  "scenes": [
+    {
+      "id": "shanghai-rain-dark",
+      "locale": "zh-CN",
+      "theme": "dark",
+      "mock": {"city": "上海", "temperature": 18, "weather": "rain", "humidity": 84}
+    },
+    {
+      "id": "london-sun-light",
+      "locale": "en-GB",
+      "theme": "light",
+      "system_ui": false,
+      "mock": {"city": "London", "temperature": 23, "weather": "sunny", "humidity": 52}
+    },
+    {
+      "id": "tablet-dark",
+      "locale": "zh-CN",
+      "theme": "dark",
+      "device": "tablet",
+      "resolution": {"width": 1600, "height": 2560},
+      "mock": {"city": "北京", "temperature": 12, "weather": "cloudy", "humidity": 67}
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<resources>
+    <string name="weather_title">WEATHER</string>
+    <string name="sunny">Sunny</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="rain">Light rain</string>
+    <string name="hourly">Hourly forecast</string>
+    <string name="humidity">Humidity</string>
+    <string name="details">View details</string>
+</resources>
